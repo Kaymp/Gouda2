@@ -14,7 +14,7 @@
             <div class="col-md-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Liste des categories</h2>
+                        <h2>Categorie list</h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a href="{{ path('app_admin_new_categorie') }}" class="btn btn-success">NEW</a>
                             </li>
@@ -26,10 +26,10 @@
                             <form action="{{ path('app_admin_groupaction_categorie') }}" id="grpaction" method="post" name="grpaction">
                                 <div class="form-group form-inline">
                                     <select class="form-control" name="action" required id="action_select">
-                                        <option value="">Action de groupe</option>
-                                        <option value="desactiver">Desactiver</option>
-                                        <option value="activer">Activer</option>
-                                        <option value="supprimer">Supprimer</option>
+                                        <option value="">Action list</option>
+                                        <option value="desactiver">Deactivate</option>
+                                        <option value="activer">Activate</option>
+                                        <option value="supprimer">Delete</option>
                                     </select>
                                     <button class="btn btn-primary" type="submit">Go!!</button>
                                 </div>
@@ -38,11 +38,11 @@
                             <table id="example" class="display table table-striped table-bordered dataminetables" >
                                 <thead>
                                 <th><input type="checkbox" id="select_all" name="select_all"></th>
-                                <th>Libelle</th>
-                                <th>Cat. parente</th>
+                                <th>Wording</th>
+                                <th>Cat. parent</th>
                                 <th>Modifier</th>
-                                <th>Etat ?</th>
-                                <th>Suprimer</th>
+                                <th>State ?</th>
+                                <th>Supressed</th>
                                 </thead>
                                 <tbody>
                                 {% for categorie in categories|filter(categorie => not categorie.deleted)  %}

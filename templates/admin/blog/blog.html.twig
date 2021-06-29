@@ -14,7 +14,7 @@
             <div class="col-md-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Liste des post du blog</h2>
+                        <h2>Blog lists</h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a href="{{ path('app_admin_new_blogPosts') }}" class="btn btn-success">NEW</a>
                             </li>
@@ -27,10 +27,10 @@
                                 <div class="form-group form-inline">
                                     {%  if is_granted("ROLE_EDITORIAL") %}
                                         <select class="form-control" name="action" required id="action_select">
-                                            <option value="">Action de groupe</option>
-                                            <option value="desactiver">Desactiver</option>
-                                            <option value="activer">Activer</option>
-                                            <option value="supprimer">Supprimer</option>
+                                            <option value="">Action list</option>
+                                            <option value="desactiver">Deactivate</option>
+                                            <option value="activer">Activate</option>
+                                            <option value="supprimer">Delete</option>
                                         </select>
                                         <button class="btn btn-primary" type="submit">Go!!</button>
                                     {% endif %}
@@ -42,13 +42,13 @@
                                 {% if is_granted("ROLE_EDITORIAL") %}
                                     <th><input type="checkbox" id="select_all" name="select_all"></th>
                                 {% endif %}
-                                <th>Titre</th>
+                                <th>Title</th>
                                 <th>Date Creation</th>
-                                <th>Date de publication</th>
+                                <th>Date of publication</th>
                                 <th>Modifier</th>
                                 {% if is_granted("ROLE_EDITORIAL") %}
-                                    <th>Etat ?</th>
-                                    <th>Suprimer</th>
+                                    <th>State ?</th>
+                                    <th>...</th>
                                 {% endif %}
                                 <th>Preview</th>
                                 </thead>
